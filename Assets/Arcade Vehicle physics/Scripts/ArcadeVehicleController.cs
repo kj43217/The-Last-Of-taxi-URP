@@ -91,21 +91,31 @@ public class ArcadeVehicleController : MonoBehaviour
             float TurnMultiplyer = turnCurve.Evaluate(carVelocity.magnitude/ MaxSpeed);
             if (verticalInput > 0.1f || carVelocity.z >1)
             {
-                carBody.AddTorque(Vector3.up * horizontalInput * sign * turn*100* TurnMultiplyer);
+                carBody.AddTorque(Vector3.up * horizontalInput * sign * turn * 100 * TurnMultiplyer);
             }
             else if (verticalInput < -0.1f || carVelocity.z < -1)
             {
-                carBody.AddTorque(Vector3.up * horizontalInput * sign * turn*100* TurnMultiplyer);
+                carBody.AddTorque(Vector3.up * horizontalInput * sign * turn * 100 * TurnMultiplyer);
             }
 
             //brakelogic
-            if (Input.GetAxis("Jump") > 0.1f)
+            if (Input.GetAxis("Brake") > 0.1f)
             {
                 rb.constraints = RigidbodyConstraints.FreezeRotationX;
             }
             else
             {
                 rb.constraints = RigidbodyConstraints.None;
+            }
+
+            //Drift
+            if (Input.GetButton("Fire3"))
+            {
+                turn = 12f;
+            }
+            else
+            {
+                turn = 5f;
             }
 
             //accelaration logic
@@ -119,7 +129,7 @@ public class ArcadeVehicleController : MonoBehaviour
             }
             else if (movementMode == MovementMode.Velocity)
             {
-                if (Mathf.Abs(verticalInput) > 0.1f && Input.GetAxis("Jump")<0.1f)
+                if (Mathf.Abs(verticalInput) > 0.1f && Input.GetAxis("Brake")<0.1f)
                 {
                     rb.velocity = Vector3.Lerp(rb.velocity, carBody.transform.forward * verticalInput * MaxSpeed, accelaration/10 * Time.deltaTime);
                 }
