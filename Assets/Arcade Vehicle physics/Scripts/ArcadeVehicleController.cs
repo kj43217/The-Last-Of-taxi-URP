@@ -50,14 +50,15 @@ public class ArcadeVehicleController : MonoBehaviour
             Physics.defaultMaxAngularSpeed = 100;
         }
     }
+
     private void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal"); //turning input
         verticalInput = Input.GetAxis("Vertical");     //accelaration input
         Visuals();
         AudioManager();
-
     }
+
     public void AudioManager()
     {
         engineSound.pitch = Mathf.Lerp(minPitch, MaxPitch, Mathf.Abs(carVelocity.z) / MaxSpeed);
@@ -207,9 +208,6 @@ public class ArcadeVehicleController : MonoBehaviour
                 Gizmos.color = Color.green;
                 Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider>().size);
             }
-            
         }
-
     }
-
 }
