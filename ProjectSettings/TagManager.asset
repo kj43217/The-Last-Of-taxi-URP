@@ -9,8 +9,12 @@ TagManager:
   - Marcador
   - Blocks
   - IaCar
-  - Deliver
   - Car
+  - Deliver1
+  - Deliver2
+  - Deliver3
+  - Passenger
+  - GuideArrow
   layers:
   - Default
   - TransparentFX

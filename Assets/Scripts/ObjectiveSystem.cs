@@ -15,12 +15,14 @@ public class ObjectiveSystem : MonoBehaviour
 
     public GameObject passenger1, passenger2, passenger3;
     public GameObject enableTargetObject;
+    public bool passenger1inCar, passenger2inCar, passenger3inCar;
 
-    GuideArrow guideArrow;
+    public GameObject guideArrow;
 
     private void Awake()
     {
         instance = this;
+        //guideArrow = GameObject.FindGameObjectWithTag("GuideArrow").GetComponent<GuideArrow>();
     }
 
     private void Update()
@@ -60,7 +62,7 @@ public class ObjectiveSystem : MonoBehaviour
             if(_id == 1)
             {
                 passenger1.gameObject.SetActive(false);
-                Destroy(GameObject.FindWithTag("Deliver"));
+                Destroy(GameObject.FindWithTag("Deliver1"));
                 passenger2.gameObject.SetActive(true);
                 Debug.Log(score.gameScore);
                 
@@ -69,7 +71,7 @@ public class ObjectiveSystem : MonoBehaviour
             if (_id == 2)
             {
                 passenger2.gameObject.SetActive(false);
-                Destroy(GameObject.FindWithTag("Deliver"));
+                Destroy(GameObject.FindWithTag("Deliver2"));
                 passenger3.gameObject.SetActive(true);
                 Debug.Log(score.gameScore);
             }//activeObjective = null;
@@ -85,14 +87,6 @@ public class ObjectiveSystem : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider col)
-    {
-        if (col.CompareTag("Car"))
-        {
-            playerIsHere = false;
-        }
-    }
-
     IEnumerator WaitForPickup()
     {               
         if (playerIsHere)
@@ -100,7 +94,23 @@ public class ObjectiveSystem : MonoBehaviour
             yield return new WaitForSeconds(2.5f); 
             enableTargetObject.GetComponent<MeshRenderer>().enabled = false;
             AddObjective();
-            Debug.Log("Picked Up Passenger!!");                       
+            Debug.Log("Picked Up Passenger!!");
+
+            if (passenger1 == true)
+            {
+                passenger1inCar = true;
+                guideArrow.gameObject.SetActive(true);
+            }
+            /*if (passenger2 == true)
+            {
+                passenger2inCar = true;
+                guideArrow.gameObject.SetActive(true);
+            }
+            if (passenger3 == true)
+            {
+                passenger3inCar = true;
+                guideArrow.gameObject.SetActive(true);
+            }*/
         }
     }
 }
