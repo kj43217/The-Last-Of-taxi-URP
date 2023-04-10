@@ -72,7 +72,6 @@ public class ArcadeVehicleController : MonoBehaviour
         }
     }
 
-
     void FixedUpdate()
     {
         carVelocity = carBody.transform.InverseTransformDirection(carBody.velocity);
