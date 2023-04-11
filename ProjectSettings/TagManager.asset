@@ -11,10 +11,11 @@ TagManager:
   - IaCar
   - Car
   - Deliver1
-  - Deliver2
   - Deliver3
   - Passenger
   - GuideArrow
+  - OtherCar
+  - Rutas
   layers:
   - Default
   - TransparentFX

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ObjectiveReceiver : MonoBehaviour
 {
-    public int objectiveId;
-
+    public Passenger myPassenger;
+    public ObjectiveSystem objectiveSystem;
     private void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Car"))
+        if (myPassenger.inCar)
+            if (col.CompareTag("Car"))
         {
-             ObjectiveSystem.instance.CompleteObjective(objectiveId);           
+                GetComponent<BoxCollider>().enabled = false;
+                GetComponent<MeshRenderer>().enabled = false;
+                objectiveSystem.CompleteObjective(myPassenger);           
         }
     }
 }

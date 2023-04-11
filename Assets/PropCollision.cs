@@ -19,11 +19,15 @@ public class PropCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (gameObject.tag == "IaCar")
+            rb.mass = 1f;
+
+            if (collision.gameObject.tag == "Player")
         {
             rb.AddForce(new Vector3(0, 10, 0), ForceMode.Impulse);
             
         }
+       
 
     }
 }
