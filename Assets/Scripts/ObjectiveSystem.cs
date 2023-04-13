@@ -7,8 +7,7 @@ public class ObjectiveSystem : MonoBehaviour
 
     public List<GameObject> Rutas = new List<GameObject>();
 
-    Objectives activeObjective;
-    public GameManager score;
+    public GameManager gameManager;
     public GameObject guideArrow;
     public int ruta = 0;
     public Transform activeObject;
@@ -25,22 +24,19 @@ public class ObjectiveSystem : MonoBehaviour
     {
         if(Ruta < Rutas.Count)
         { 
-        foreach (GameObject rutasObj in Rutas)
-        {
+            foreach (GameObject rutasObj in Rutas)
+            {
+                rutasObj.SetActive(false);
+            }
 
-            rutasObj.SetActive(false);
-        }
+            passengerList.Clear();
 
+            Rutas[Ruta].SetActive(true);
 
-        passengerList.Clear();
-
-        Rutas[Ruta].SetActive(true);
-
-        foreach (GameObject passengerObj in GameObject.FindGameObjectsWithTag("Passenger"))
-        {
-
-            passengerList.Add(passengerObj.gameObject.GetComponent<Passenger>());
-        }
+            foreach (GameObject passengerObj in GameObject.FindGameObjectsWithTag("Passenger"))
+            {
+                passengerList.Add(passengerObj.gameObject.GetComponent<Passenger>());
+            }
         }
     }
 
@@ -58,23 +54,22 @@ public class ObjectiveSystem : MonoBehaviour
     public void CompleteObjective(Passenger myPassenger)
     {
         
-            Debug.Log("Objective number" + myPassenger.PassengerID + " is completed");
-            activeObject = null;
-        //    guideArrow.SetActive(false);
+        Debug.Log("Objective number" + myPassenger.PassengerID + " is completed");
+        activeObject = null;
+
         //Give Reward
-        score.gameScore = myPassenger.Reward;
+        gameManager.gameScore += myPassenger.Reward;
+        gameManager.timeLeft += myPassenger.Time;
 
-            passengerList.Remove(myPassenger);    
-
+        passengerList.Remove(myPassenger);    
            
-            if(passengerList.Count <= 0)
+        if(passengerList.Count <= 0)
         {
             Debug.Log("Objective Complete");
             ruta++;
             UpdateObjectives(ruta);
         }
-             
-        }
     }
+}
 
     

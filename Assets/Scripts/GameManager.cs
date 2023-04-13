@@ -10,24 +10,43 @@ public class GameManager : MonoBehaviour
     public int gameScore = 0;
     public Text moneyText;
 
+    public int timeLeft = 45;
+    public Text timeText;
+
     private void Start()
     {
         gameScore = 0;
+        timeLeft = 45;
+
+        StartCoroutine("LoseTime");
     }
 
     void Update()
     {
-        moneyText.text = "Total Money: " + gameScore;
+        timeText.text = "Time Left: " + timeLeft;
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (timeLeft <= 0)
         {
-            Debug.Log("esc pressed");
-            if (gameScore > PlayerPrefs.GetInt("HighScore"))
-            {
-                PlayerPrefs.SetInt("HighScore", gameScore);
-            }
-            SceneManager.LoadScene(1);
+            StopCoroutine("LoseTime");
+            timeText.text = "Times Up!";
 
+            SceneManager.LoadScene(1);
+        }
+
+        moneyText.text = "Total Money: " + gameScore;
+       
+        if (gameScore > PlayerPrefs.GetInt("HighScore"))
+        {
+            PlayerPrefs.SetInt("HighScore", gameScore);
+        }
+    }
+
+    IEnumerator LoseTime()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            timeLeft--;
         }
     }
 }

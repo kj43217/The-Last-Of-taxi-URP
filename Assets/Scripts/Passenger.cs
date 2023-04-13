@@ -6,22 +6,12 @@ public class Passenger : MonoBehaviour
 {
     public ObjectiveSystem objectiveSystem;
     public GameObject dropPoint;
-    public float Time;
+    public int Time;
     public int Reward;
     public int PassengerID = 0;
     public bool inCar = false;
     public bool nearPlayer = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider col)
     {
         if (col.CompareTag("Car"))
@@ -34,7 +24,6 @@ public class Passenger : MonoBehaviour
 
     private void OnTriggerExit(Collider col)
     {
-
         nearPlayer = false;
        // this.GetComponent<MeshRenderer>().enabled = true;
     }
@@ -46,10 +35,11 @@ public class Passenger : MonoBehaviour
         if (nearPlayer)
         {
             this.GetComponent<MeshRenderer>().enabled = false;
-          //  AddObjective();
+          
+            //  AddObjective();
             Debug.Log("Picked Up Passenger!!");
 
-                inCar = true;
+            inCar = true;
             objectiveSystem.activeObject = dropPoint.transform;
             dropPoint.GetComponent<BoxCollider>().enabled = true;
             dropPoint.GetComponent<MeshRenderer>().enabled = true;
