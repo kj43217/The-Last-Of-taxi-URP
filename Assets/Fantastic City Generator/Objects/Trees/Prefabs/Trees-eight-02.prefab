@@ -883,7 +883,6 @@ GameObject:
   - component: {fileID: 4227982528941232}
   - component: {fileID: 33258260281740652}
   - component: {fileID: 23905985718361612}
-  - component: {fileID: -276043320353373752}
   - component: {fileID: -1577111280573413016}
   m_Layer: 0
   m_Name: Trees-eight-02
@@ -974,18 +973,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-276043320353373752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833840740404482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &-1577111280573413016
 Rigidbody:
   m_ObjectHideFlags: 0

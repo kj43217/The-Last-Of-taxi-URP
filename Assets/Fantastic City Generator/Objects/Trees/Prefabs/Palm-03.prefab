@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33219124691619212}
   - component: {fileID: 23614213753042168}
   - component: {fileID: 65660073698614992}
-  - component: {fileID: -5640301151982029808}
   - component: {fileID: 7809025732182596158}
   m_Layer: 0
   m_Name: Palm-03
@@ -99,18 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.23848566, y: 3.7965107, z: 0.21540695}
   m_Center: {x: -0.048544306, y: 1.8982544, z: -0.04042816}
---- !u!114 &-5640301151982029808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914464959029000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &7809025732182596158
 Rigidbody:
   m_ObjectHideFlags: 0

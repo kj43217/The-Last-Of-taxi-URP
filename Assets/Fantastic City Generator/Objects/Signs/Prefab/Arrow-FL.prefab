@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4971822825576556286}
   - component: {fileID: 1476571509788657495}
   - component: {fileID: 8188913883509504396}
-  - component: {fileID: -285074739967488122}
   - component: {fileID: 2322239707685234135}
   m_Layer: 0
   m_Name: Arrow-FL
@@ -85,18 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-285074739967488122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119587138171064564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &2322239707685234135
 Rigidbody:
   m_ObjectHideFlags: 0

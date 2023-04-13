@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 136572075769117314}
   - component: {fileID: 136173487026059588}
   - component: {fileID: 136648774134827478}
-  - component: {fileID: 5985446395563811568}
   - component: {fileID: 4759301108128283785}
   m_Layer: 0
   m_Name: Lights-Three
@@ -131,18 +130,6 @@ CapsuleCollider:
   m_Height: 7.068775
   m_Direction: 1
   m_Center: {x: 0, y: 3.52, z: 24.94}
---- !u!114 &5985446395563811568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418447648926020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &4759301108128283785
 Rigidbody:
   m_ObjectHideFlags: 0

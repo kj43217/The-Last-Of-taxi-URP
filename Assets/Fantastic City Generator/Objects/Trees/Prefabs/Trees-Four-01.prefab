@@ -392,7 +392,6 @@ GameObject:
   - component: {fileID: 4181564479882034}
   - component: {fileID: 33341645914632300}
   - component: {fileID: 23730268214325150}
-  - component: {fileID: 4561333189008152934}
   - component: {fileID: -4832393818528311785}
   m_Layer: 0
   m_Name: Trees-Four-01
@@ -475,18 +474,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4561333189008152934
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1979293879471292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &-4832393818528311785
 Rigidbody:
   m_ObjectHideFlags: 0

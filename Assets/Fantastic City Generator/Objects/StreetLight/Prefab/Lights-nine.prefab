@@ -20,7 +20,6 @@ GameObject:
   - component: {fileID: 136759597300830222}
   - component: {fileID: 136179556887459788}
   - component: {fileID: 136414149047155340}
-  - component: {fileID: 2171860865295746300}
   - component: {fileID: 5636579654323372552}
   m_Layer: 0
   m_Name: Lights-nine
@@ -221,18 +220,6 @@ CapsuleCollider:
   m_Height: 7.068775
   m_Direction: 1
   m_Center: {x: 0, y: 3.52, z: -100.04}
---- !u!114 &2171860865295746300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641823170824350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &5636579654323372552
 Rigidbody:
   m_ObjectHideFlags: 0

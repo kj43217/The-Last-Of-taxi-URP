@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33946685799574704}
   - component: {fileID: 23422251291525148}
   - component: {fileID: 136374141038218282}
-  - component: {fileID: -8128044332846340455}
   - component: {fileID: 9046844584440336102}
   m_Layer: 0
   m_Name: StreetLight-01
@@ -101,18 +100,6 @@ CapsuleCollider:
   m_Height: 7.078618
   m_Direction: 1
   m_Center: {x: -0.0010890308, y: 3.539309, z: -0.043617666}
---- !u!114 &-8128044332846340455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870132319460216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &9046844584440336102
 Rigidbody:
   m_ObjectHideFlags: 0

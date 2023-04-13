@@ -229,7 +229,6 @@ GameObject:
   - component: {fileID: 4907480211855654}
   - component: {fileID: 33938029334989334}
   - component: {fileID: 23284897672134948}
-  - component: {fileID: -650455865939707166}
   - component: {fileID: 3526604194159871934}
   m_Layer: 0
   m_Name: Trees-Two-01
@@ -308,18 +307,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-650455865939707166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1956667778094520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &3526604194159871934
 Rigidbody:
   m_ObjectHideFlags: 0

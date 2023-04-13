@@ -338,7 +338,6 @@ GameObject:
   - component: {fileID: 4496557622930328}
   - component: {fileID: 33891436308631450}
   - component: {fileID: 23743994625551412}
-  - component: {fileID: 6624449054191395332}
   - component: {fileID: 9200880824942995510}
   m_Layer: 0
   m_Name: Trees-Three-02
@@ -419,18 +418,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6624449054191395332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1914198979532388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beb29bbd790d4024b94f666deee51c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &9200880824942995510
 Rigidbody:
   m_ObjectHideFlags: 0
