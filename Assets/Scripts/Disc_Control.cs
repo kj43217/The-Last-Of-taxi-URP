@@ -11,7 +11,7 @@ public class Disc_Control : MonoBehaviour
     public List<int> Numbers = new List<int>();
 
 
-
+   
     private void Update()
     {
          ReadScore();
@@ -25,15 +25,17 @@ public class Disc_Control : MonoBehaviour
        if (P_Score != Score)
         {
             P_Score = Score;
+            Debug.Log(P_Score);
+            Debug.Log(Score);
             Numbers.Clear();
             while (Score > 0)
             {
-                Debug.Log("hola");
                 Value = Score % 10;
                 Score /= 10;
                 Numbers.Add(Value);
             }
 
+            P_Score = Score;
             UpdateScore();
         }
     }
@@ -45,8 +47,16 @@ public class Disc_Control : MonoBehaviour
 
         for (n = 0; n < DiscList.Count; n++)
         {
-            if (Numbers[n] == 0) DiscList[n].transform.Rotate(100f, 0, 0);
-            else if (Numbers[n] == 1) DiscList[n].transform.Rotate(64, 0, 0);
+            if (Numbers[n] == 0)
+            {
+                Debug.Log("rotation en x 100");
+                DiscList[n].transform.Rotate(100, 0, 0);
+            }
+            else if (Numbers[n] == 1)
+            {
+                Debug.Log("rotation en x 64");
+                DiscList[n].transform.Rotate(64, 0, 0);
+            }
             else if (Numbers[n] == 2) DiscList[n].transform.Rotate(40, 0, 0);
             else if (Numbers[n] == 3) DiscList[n].transform.Rotate(2.4f, 0, 0);
             else if (Numbers[n] == 4) DiscList[n].transform.Rotate(-31, 0, 0);
