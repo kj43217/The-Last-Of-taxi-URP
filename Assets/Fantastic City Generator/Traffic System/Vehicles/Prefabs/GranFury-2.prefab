@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 479837827042530097}
   - component: {fileID: 479837827041727249}
   - component: {fileID: 479837827040760273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 479837827042530099}
   - component: {fileID: 479837827041727251}
   - component: {fileID: 479837827040760275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 479837827042530101}
   - component: {fileID: 479837827041727253}
   - component: {fileID: 479837827040760277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 479837827042530103}
   - component: {fileID: 479837827041727255}
   - component: {fileID: 479837827040760279}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 479837827042658746}
   - component: {fileID: 6713508052810692068}
   - component: {fileID: -3879221971391567693}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GranFury-2
   m_TagString: IaCar
   m_Icon: {fileID: 0}
@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 479837827041727263}
   - component: {fileID: 479837827040760287}
   - component: {fileID: 479837827042658747}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fury
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -569,7 +569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 513004305875150980}
   - component: {fileID: 3548097752103007728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BR - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +631,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4604538377254068547}
   - component: {fileID: 6898212417001757502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FL - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3882232556117434121}
   - component: {fileID: 413043750705685227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BL - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -755,7 +755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3543937040916723806}
   - component: {fileID: 3168484973864767394}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FR - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -816,7 +816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5413259996570280133}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RayC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7649130630057184562}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RayC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1022286899887507527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RayC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4741422430429121825}
   - component: {fileID: 1857348157133080599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BL - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 7628195319354907839}
   - component: {fileID: 5505877133097415113}
   - component: {fileID: -7416827795379498478}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fiat 147-b
   m_TagString: IaCar
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 1329958932639687618}
   - component: {fileID: 1329958932638720258}
   - component: {fileID: 5241406075766775042}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 1329958932641014756}
   - component: {fileID: 1329958932639687620}
   - component: {fileID: 1329958932638720260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 1329958932641014758}
   - component: {fileID: 1329958932639687622}
   - component: {fileID: 1329958932638720262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 1329958932641014764}
   - component: {fileID: 1329958932639687630}
   - component: {fileID: 1329958932638720270}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   - component: {fileID: 1329958932641014766}
   - component: {fileID: 1329958932639687616}
   - component: {fileID: 1329958932638720256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 140876055872325839}
   - component: {fileID: 7311098056781808540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FR - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6479192827252207043}
   - component: {fileID: 6483166798064753149}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BR - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6036923847209796614}
   - component: {fileID: 4883010062568364403}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FL - WheelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1464354794803048040}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RayC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
