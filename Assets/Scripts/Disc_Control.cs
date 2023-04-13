@@ -4,50 +4,57 @@ using UnityEngine;
 
 public class Disc_Control : MonoBehaviour
 {
-    GameObject Disc_1;
-    GameObject Disc_2;
-    GameObject Disc_3;
-    GameObject Disc_4;
-    GameObject Disc_5;
-    GameObject Disc_6;
-    GameObject Disc_7;
+   public List<GameObject> DiscList;
 
-     int Score = 1234;
+    public int Score ;
+    private int P_Score ;
     public List<int> Numbers = new List<int>();
-    bool Did_Loop;
+
 
 
     private void Update()
     {
-        ReadScore();
+         ReadScore();
     }
 
 
 
     void ReadScore()
     {
-        Debug.Log("hola");
-      
-
         int Value;
-        //if (Did_Loop == false)
-       // {
+       if (P_Score != Score)
+        {
+            P_Score = Score;
+            Numbers.Clear();
             while (Score > 0)
             {
                 Debug.Log("hola");
                 Value = Score % 10;
                 Score /= 10;
                 Numbers.Add(Value);
-
-              
-
             }
 
-            //Did_Loop = true;
-        //}
-      
+            UpdateScore();
+        }
+    }
 
-       
 
+    void UpdateScore()
+    {
+        int n;
+
+        for (n = 0; n < DiscList.Count; n++)
+        {
+            if (Numbers[n] == 0) DiscList[n].transform.Rotate(100f, 0, 0);
+            else if (Numbers[n] == 1) DiscList[n].transform.Rotate(64, 0, 0);
+            else if (Numbers[n] == 2) DiscList[n].transform.Rotate(40, 0, 0);
+            else if (Numbers[n] == 3) DiscList[n].transform.Rotate(2.4f, 0, 0);
+            else if (Numbers[n] == 4) DiscList[n].transform.Rotate(-31, 0, 0);
+            else if (Numbers[n] == 5) DiscList[n].transform.Rotate(-82, 0, 0);
+            else if (Numbers[n] == 6) DiscList[n].transform.Rotate(-114, 0, 0);
+            else if (Numbers[n] == 7) DiscList[n].transform.Rotate(-140, 0, 0);
+            else if (Numbers[n] == 8) DiscList[n].transform.Rotate(-173, 0, 0);
+            else if (Numbers[n] == 9) DiscList[n].transform.Rotate(-216, 0, 0);
+        }
     }
 }
