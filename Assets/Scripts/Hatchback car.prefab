@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 1338424698514207065}
   - component: {fileID: 1338424698514207064}
   - component: {fileID: 1338424698514207067}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Skid marks FR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5206,7 +5206,7 @@ GameObject:
   - component: {fileID: 1338424699261324647}
   - component: {fileID: 1338424699261324646}
   - component: {fileID: 1338424699261324649}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Skid marks RL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10054,7 +10054,7 @@ GameObject:
   - component: {fileID: 1338424699294785547}
   - component: {fileID: 1338424699294785546}
   - component: {fileID: 1338424699294785549}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Skid marks RR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15150,7 +15150,7 @@ GameObject:
   - component: {fileID: 1338424699784439283}
   - component: {fileID: 1338424699784439282}
   - component: {fileID: 1338424699784439285}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Skid marks FL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20096,7 +20096,7 @@ GameObject:
   - component: {fileID: 1338424700259802455}
   - component: {fileID: 1338424700259802454}
   - component: {fileID: 1338424700259802457}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Hatchback car
   m_TagString: Car
   m_Icon: {fileID: 0}
@@ -21199,17 +21199,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 40a873dc2f2b4bd4f89e0834fde1cb11,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 40a873dc2f2b4bd4f89e0834fde1cb11,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 40a873dc2f2b4bd4f89e0834fde1cb11,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 40a873dc2f2b4bd4f89e0834fde1cb11,
         type: 3}
@@ -21219,7 +21219,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 40a873dc2f2b4bd4f89e0834fde1cb11,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.22
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 40a873dc2f2b4bd4f89e0834fde1cb11,
         type: 3}

@@ -14,7 +14,7 @@ public class Passenger : MonoBehaviour
 
     private void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("Car"))
+        if (col.CompareTag("Player"))
         {
             nearPlayer = true;
             StartCoroutine(WaitForPickup());

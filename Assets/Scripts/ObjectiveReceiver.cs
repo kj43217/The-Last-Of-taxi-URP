@@ -9,7 +9,7 @@ public class ObjectiveReceiver : MonoBehaviour
     private void OnTriggerEnter(Collider col)
     {
         if (myPassenger.inCar)
-            if (col.CompareTag("Car"))
+            if (col.CompareTag("Player"))
         {
                 GetComponent<BoxCollider>().enabled = false;
                 GetComponent<MeshRenderer>().enabled = false;

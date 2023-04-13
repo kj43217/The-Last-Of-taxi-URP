@@ -10,13 +10,13 @@ public class GameManager : MonoBehaviour
     public int gameScore = 0;
     public Text moneyText;
 
-    public int timeLeft = 45;
+    public int timeLeft = 80;
     public Text timeText;
 
     private void Start()
     {
         gameScore = 0;
-        timeLeft = 45;
+        timeLeft = 80;
 
         StartCoroutine("LoseTime");
     }
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             StopCoroutine("LoseTime");
             timeText.text = "Times Up!";
 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
 
         moneyText.text = "Total Money: " + gameScore;
