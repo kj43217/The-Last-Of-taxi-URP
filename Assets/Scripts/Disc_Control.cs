@@ -9,6 +9,7 @@ public class Disc_Control : MonoBehaviour
     public int Score ;
     private int P_Score ;
     public List<int> Numbers = new List<int>();
+    public float FFA; //Forward Facing Angle
 
 
    
@@ -47,24 +48,16 @@ public class Disc_Control : MonoBehaviour
 
         for (n = 0; n < DiscList.Count; n++)
         {
-            if (Numbers[n] == 0)
-            {
-                Debug.Log("rotation en x 100");
-                DiscList[n].transform.Rotate(100, 0, 0);
-            }
-            else if (Numbers[n] == 1)
-            {
-                Debug.Log("rotation en x 64");
-                DiscList[n].transform.Rotate(64, 0, 0);
-            }
-            else if (Numbers[n] == 2) DiscList[n].transform.Rotate(40, 0, 0);
-            else if (Numbers[n] == 3) DiscList[n].transform.Rotate(2.4f, 0, 0);
-            else if (Numbers[n] == 4) DiscList[n].transform.Rotate(-31, 0, 0);
-            else if (Numbers[n] == 5) DiscList[n].transform.Rotate(-82, 0, 0);
-            else if (Numbers[n] == 6) DiscList[n].transform.Rotate(-114, 0, 0);
-            else if (Numbers[n] == 7) DiscList[n].transform.Rotate(-140, 0, 0);
-            else if (Numbers[n] == 8) DiscList[n].transform.Rotate(-173, 0, 0);
-            else if (Numbers[n] == 9) DiscList[n].transform.Rotate(-216, 0, 0);
+            if (Numbers[n] == 0) DiscList[n].transform.rotation = Quaternion.Euler(100f,0,FFA);
+            else if (Numbers[n] == 1) DiscList[n].transform.rotation = Quaternion.Euler(64f, 0, FFA);
+            else if (Numbers[n] == 2) DiscList[n].transform.rotation = Quaternion.Euler(40f, 0, FFA);
+            else if (Numbers[n] == 3) DiscList[n].transform.rotation = Quaternion.Euler(2.4f, 0, FFA);
+            else if (Numbers[n] == 4) DiscList[n].transform.rotation = Quaternion.Euler(-31f, 0, FFA);
+            else if (Numbers[n] == 5) DiscList[n].transform.rotation = Quaternion.Euler(-82, 0, FFA);
+            else if (Numbers[n] == 6) DiscList[n].transform.rotation = Quaternion.Euler(-114, 0, FFA);
+            else if (Numbers[n] == 7) DiscList[n].transform.rotation = Quaternion.Euler(-140, 0, FFA);
+            else if (Numbers[n] == 8) DiscList[n].transform.rotation = Quaternion.Euler(-173, 0,FFA);
+            else if (Numbers[n] == 9) DiscList[n].transform.rotation = Quaternion.Euler(-216, 0, FFA);
         }
     }
 }
