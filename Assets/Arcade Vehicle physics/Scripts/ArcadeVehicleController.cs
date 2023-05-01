@@ -45,6 +45,7 @@ public class ArcadeVehicleController : MonoBehaviour
     private void Start()
     {
         radius = rb.GetComponent<SphereCollider>().radius;
+
         if (movementMode == MovementMode.AngularVelocity)
         {
             Physics.defaultMaxAngularSpeed = 100;
@@ -62,6 +63,7 @@ public class ArcadeVehicleController : MonoBehaviour
     public void AudioManager()
     {
         engineSound.pitch = Mathf.Lerp(minPitch, MaxPitch, Mathf.Abs(carVelocity.z) / MaxSpeed);
+
         if (Mathf.Abs(carVelocity.x) > 10 && grounded())
         {
             SkidSound.mute = false;
@@ -97,7 +99,7 @@ public class ArcadeVehicleController : MonoBehaviour
                 carBody.AddTorque(Vector3.up * horizontalInput * sign * turn * 100 * TurnMultiplyer);
             }
 
-            //brakelogic
+            /*//brakelogic
             if (Input.GetAxis("Brake") > 0.1f)
             {
                 rb.constraints = RigidbodyConstraints.FreezeRotationX;
@@ -105,10 +107,20 @@ public class ArcadeVehicleController : MonoBehaviour
             else
             {
                 rb.constraints = RigidbodyConstraints.None;
+            }*/
+
+            //brakelogic
+            if (Input.GetAxis("Brake") > 0.1f)
+            {
+                carBody.constraints = RigidbodyConstraints.FreezeAll;
+            }
+            else
+            {
+                carBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
             }
 
             //Drift
-            if (Input.GetButton("Fire3"))
+            if (Input.GetButton("Drift"))
             {
                 turn = 12f;
             }
