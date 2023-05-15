@@ -42,9 +42,12 @@ public class ArcadeVehicleController : MonoBehaviour
     private float radius, horizontalInput, verticalInput;
     private Vector3 origin;
 
+    public bool canMove;
+
     private void Start()
     {
         radius = rb.GetComponent<SphereCollider>().radius;
+        canMove = true;
 
         if (movementMode == MovementMode.AngularVelocity)
         {
@@ -56,6 +59,16 @@ public class ArcadeVehicleController : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal"); //turning input
         verticalInput = Input.GetAxis("Vertical");     //accelaration input
+
+        if (canMove == true)
+        {
+            CanMove();
+        }
+        else
+        {
+            StopMovement();
+        }
+
         Visuals();
         AudioManager();
     }
@@ -156,6 +169,7 @@ public class ArcadeVehicleController : MonoBehaviour
         }
 
     }
+
     public void Visuals()
     {
         //tires
@@ -178,8 +192,6 @@ public class ArcadeVehicleController : MonoBehaviour
         {
             BodyMesh.localRotation = Quaternion.Slerp(BodyMesh.localRotation, Quaternion.Euler(0,0,0) , 0.05f);
         }
-        
-
     }
 
     public bool grounded() //checks for if vehicle is grounded or not
@@ -230,5 +242,20 @@ public class ArcadeVehicleController : MonoBehaviour
                 Gizmos.DrawWireCube(transform.position, GetComponent<BoxCollider>().size);
             }
         }
+    }
+
+    private void StopMovement()
+    {
+        if (grounded())
+        {
+            carBody.constraints = RigidbodyConstraints.FreezeAll;
+            canMove = false;
+        }
+    }
+
+    private void CanMove()
+    {
+        carBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        canMove = true;
     }
 }
