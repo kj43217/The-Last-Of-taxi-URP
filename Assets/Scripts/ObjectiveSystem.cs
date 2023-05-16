@@ -46,8 +46,10 @@ public class ObjectiveSystem : MonoBehaviour
         {
             guideArrow.transform.LookAt(activeObject);
         }
-        else guideArrow.transform.LookAt(passengerList[0].transform);
+        else if (passengerList.Count >0){
 
+            guideArrow.transform.LookAt(passengerList[0].transform);
+        }
     }
 
 
@@ -69,6 +71,8 @@ public class ObjectiveSystem : MonoBehaviour
             ruta++;
             UpdateObjectives(ruta);
         }
+
+        guideArrow.SetActive(false);
     }
 }
 
