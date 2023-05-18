@@ -1534,5 +1534,7 @@ MonoBehaviour:
   - {fileID: 1380079390}
   - {fileID: 480013763}
   - {fileID: 1047366805}
-  Score: 0
+  Score: 123
   Numbers: 
+  FFA: 90
+  gameManager: {fileID: 0}

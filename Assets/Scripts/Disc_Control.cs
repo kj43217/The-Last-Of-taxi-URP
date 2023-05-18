@@ -13,10 +13,7 @@ public class Disc_Control : MonoBehaviour
 
     public GameManager gameManager;
 
-    private void Start()
-    {
-        
-    }
+ 
 
     private void Update()
     {
@@ -27,8 +24,8 @@ public class Disc_Control : MonoBehaviour
     {
         int Value;
         P_Score = gameManager.gameScore;
-        Debug.Log(P_Score);
-        Debug.Log(gameManager.gameScore);
+        //Debug.Log(P_Score);
+        //Debug.Log(gameManager.gameScore);
         Numbers.Clear();
         while (P_Score > 0)
         {

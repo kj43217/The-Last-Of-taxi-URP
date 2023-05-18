@@ -6,6 +6,8 @@ public class Passenger : MonoBehaviour
 {
     public ObjectiveSystem objectiveSystem;
     public GameObject dropPoint;
+    public GameObject Arrow;
+    public GameObject PickUpZone;
     public int Time;
     public int Reward;
     public int PassengerID = 0;
@@ -34,8 +36,10 @@ public class Passenger : MonoBehaviour
         yield return new WaitForSeconds(2.5f);
         if (nearPlayer)
         {
-            this.GetComponent<MeshRenderer>().enabled = false;
-          
+            this.GetComponent<MeshRenderer>().enabled = false;//desaparece al pasajero.
+            Arrow.GetComponent<MeshRenderer>().enabled = false;
+            PickUpZone.GetComponent<MeshRenderer>().enabled = false;
+
             //  AddObjective();
             Debug.Log("Picked Up Passenger!!");
 
