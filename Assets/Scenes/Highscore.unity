@@ -1102,6 +1102,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HStext: {fileID: 550779182}
+  highscoreTableBefore: {fileID: 0}
+  highscoreTableAfter: {fileID: 0}
 --- !u!1 &1763972677
 GameObject:
   m_ObjectHideFlags: 0

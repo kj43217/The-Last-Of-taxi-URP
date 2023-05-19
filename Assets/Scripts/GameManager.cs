@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int gameScore = 0;
-    public Text moneyText;
+    //public Text moneyText;
 
     public int timeLeft = 80;
     public Text timeText;
@@ -15,7 +15,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameScore = 0;
-        timeLeft = 5;
+        timeLeft = 30;
+
+        if(gameScore == 0)
+        {
+            PlayerPrefs.SetInt("HighScore", 0);
+        }
 
         StartCoroutine("LoseTime");
     }
@@ -34,7 +39,7 @@ public class GameManager : MonoBehaviour
 
         //timeText.text = "  " + timeLeft;
  
-        moneyText.text = "Total Money: " + gameScore;
+        //moneyText.text = "Total Money: " + gameScore;
        
         if (gameScore > PlayerPrefs.GetInt("HighScore"))
         {
