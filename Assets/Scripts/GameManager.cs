@@ -7,15 +7,13 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public int gameScore = 0;
-    //public Text moneyText;
-
     public int timeLeft = 80;
     public Text timeText;
 
     private void Start()
     {
         gameScore = 0;
-        timeLeft = 30;
+        timeLeft = 80;
 
         if(gameScore == 0)
         {
@@ -36,10 +34,6 @@ public class GameManager : MonoBehaviour
         {
             timeText.text = "" + timeLeft;
         }
-
-        //timeText.text = "  " + timeLeft;
- 
-        //moneyText.text = "Total Money: " + gameScore;
        
         if (gameScore > PlayerPrefs.GetInt("HighScore"))
         {
@@ -49,16 +43,13 @@ public class GameManager : MonoBehaviour
 
     public void StopGame()
     {
-        //timeText.text = "TIMES UP!";
         StopCoroutine("LoseTime");
-        Invoke("SceneLoader", 3);
-        //SceneLoader();
-        //SceneManager.LoadScene(1);    
+        Invoke("SceneLoader", 3);   
     }
 
     private void SceneLoader()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     IEnumerator LoseTime()
