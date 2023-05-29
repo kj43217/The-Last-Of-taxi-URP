@@ -11,9 +11,6 @@ public class Highscore : MonoBehaviour
 
     public static Highscore instance;
 
-    public GameObject highscoreTableBefore;
-    public GameObject highscoreTableAfter;
-
     public void OnEnable()
     {        
         entryContainer = transform.Find("Elements");

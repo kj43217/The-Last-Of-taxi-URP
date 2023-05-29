@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey.Utils;
 using CodeMonkey;
+using UnityEngine.SceneManagement;
 
 public class UI_Testing : MonoBehaviour
 {
 
     public Highscore highscore;
-
-    private void Awake()
-    {
-        highscore.highscoreTableBefore.SetActive(true);
-        highscore.highscoreTableAfter.SetActive(false);
-    }
+    static bool reloaded;
 
     private void Start()
     {
+        if (reloaded == true)
+        {
+            transform.Find("SubmitScoreButton").gameObject.SetActive(false);
+        }
+
         transform.Find("SubmitScoreButton").GetComponent<Button_UI>().ClickFunc = () =>
         {
             UI_Blocker.Show_Static();
@@ -28,7 +29,7 @@ public class UI_Testing : MonoBehaviour
             }, (int score) =>
             {
                 // Clicked Ok
-                UI_InputWindow.Show_Static("Player Name", "", "ABCDEFGHIJKLMNÑOPQRSTUVXYWZ", 3, () =>
+                UI_InputWindow.Show_Static("Player Name", "", "abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVXYWZ", 3, () =>
                 {
                     // Cancel
                     UI_Blocker.Hide_Static();
@@ -36,12 +37,20 @@ public class UI_Testing : MonoBehaviour
                 {
                     // Ok
                     UI_Blocker.Hide_Static();
-                    highscore.highscoreTableBefore.GetComponent<Highscore>().AddHighscoreEntry(score, nameText);
-                    highscore.highscoreTableBefore.SetActive(false);
-                    highscore.highscoreTableAfter.SetActive(true);
+                    highscore.GetComponent<Highscore>().AddHighscoreEntry(score, nameText);
+                    Reload();                   
                 });
             });
         };
-
+        
+    }
+    
+    public void Reload()
+    {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        Time.timeScale = 2;
+        reloaded = true;
     }
 }
+

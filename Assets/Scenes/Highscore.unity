@@ -1101,9 +1101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24a3010703d7b27468398670bab42210, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HStext: {fileID: 550779182}
-  highscoreTableBefore: {fileID: 0}
-  highscoreTableAfter: {fileID: 0}
+  highscoreTableBefore: {fileID: 1697310941}
+  highscoreTableAfter: {fileID: 1697310941}
 --- !u!1 &1763972677
 GameObject:
   m_ObjectHideFlags: 0
