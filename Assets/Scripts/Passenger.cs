@@ -8,6 +8,7 @@ public class Passenger : MonoBehaviour
     public GameObject dropPoint;
     public GameObject Arrow;
     public GameObject PickUpZone;
+    public GameObject PassengerSprite;
     public int Time;
     public int Reward;
     public int PassengerID = 0;
@@ -39,7 +40,8 @@ public class Passenger : MonoBehaviour
             this.GetComponent<MeshRenderer>().enabled = false;//desaparece al pasajero.
             Arrow.GetComponent<MeshRenderer>().enabled = false;
             PickUpZone.GetComponent<MeshRenderer>().enabled = false;
-
+            PassengerSprite.SetActive(true);
+            
             //  AddObjective();
             Debug.Log("Picked Up Passenger!!");
 
@@ -48,6 +50,7 @@ public class Passenger : MonoBehaviour
             dropPoint.GetComponent<BoxCollider>().enabled = true;
             dropPoint.GetComponent<MeshRenderer>().enabled = true;
             objectiveSystem.guideArrow.SetActive(true);
+            PassengerSprite.SetActive(false);
 
         }
     }
